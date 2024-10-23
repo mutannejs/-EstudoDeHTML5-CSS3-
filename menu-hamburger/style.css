@@ -1,0 +1,90 @@
+:root {
+    /* Paleta gerada pelo Adobe Color, com base na harmonia de cores "Complementar", Modo de cores "RGB" e cor base "#FAB92D" (essa é a cor do logo, para pegar ela foi usada a extensão ColorZilla do navegador) */
+    --cor0: #2D75FA;
+    --cor1: #BA9950;
+    --cor2: #FAB92D;
+    --cor3: #5571A6;
+    --cor4: #7A6E53;
+    --cor5: #43474F;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2em;
+    background-color: var(--cor5);
+    color: var(--cor2);
+}
+
+#hamburguer {
+    display: none;
+    padding: .4em .7em;
+    background: none;
+    border: 1px solid transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--cor2);
+    cursor: pointer;
+    transition: .3s;
+}
+
+#hamburguer:hover {
+    border-color: #7A6E53;
+    text-shadow: 2px 2px 0px #7A6E53;
+    box-shadow: 2px 2px 0px #7A6E53;
+}
+
+#hamburguer > span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: .3em;
+    margin-left: .7em;
+    border-top: 2px solid var(--cor2);
+}
+
+#hamburguer > span::before,
+#hamburguer > span::after {
+    display: block;
+    content: '';
+    width: 30px;
+    margin-top: .5em;
+    border-top: 2px solid var(--cor2);
+}
+
+.menu {
+    display: flex;
+    gap: .5em;
+    list-style: none;
+}
+
+.menu > li {
+    padding: 1em 1.5em;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+
+.menu > li:hover {
+    cursor: pointer;
+    border-color: #7A6E53;
+    text-shadow: 2px 2px 0px #7A6E53;
+    box-shadow: 2px 2px 0px #7A6E53;
+}
+
+@media (max-width: 700px) {
+    .menu {
+        display: none;
+    }
+
+    #hamburguer {
+        display: flex;
+        align-items: center;
+    }
+}
