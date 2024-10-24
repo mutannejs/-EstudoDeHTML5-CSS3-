@@ -1,0 +1,85 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0em 2em;
+    border: 1px solid #d99;
+    border-radius: 1em;
+    box-shadow: 2px 2px 4px rgba(200, 90, 90, .3);
+    color: #632;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+form h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form fieldset,
+form input {
+    border: 1px solid #b99;
+    border-radius: 2px;
+}
+
+form fieldset {
+    border-radius: 5px;
+}
+
+form input:focus {
+    outline: 1px solid #c55;
+}
+
+form input:hover {
+    outline: 1px solid #fbb;
+}
+
+form input[type="radio"]:focus,
+form input[type="radio"]:hover {
+    outline: none;
+}
+
+form label {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+}
+
+form abbr {
+    text-decoration: none;
+    color: #c55;
+}
+
+form label abbr {
+    position: absolute;
+    right: 0;
+}
+
+form ul {
+    margin: 0;
+    padding: .5em 1.3em;
+}
+
+label.nobreak ~ input {
+    vertical-align: top;
+}
+
+label.nobreak em {
+    font-size: .8em;
+    background-color: #fee;
+}
+
+form select {
+    width: 188px;
+}
+
+form button {
+    margin-left: 155px;
+    padding: .4em .8em;
+    background-color: transparent;
+    border: 3px groove #fbb;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #632;
+    color: #fee;
+    border: 3px solid #632;
+}

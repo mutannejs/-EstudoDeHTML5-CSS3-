@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários HTML - 02</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="name">
+                Name: <input type="text" id="name" name="user_name">
+            </label>
+        </div>
+        <div>
+            <label for="username">Name: <abbr title="required">*</abbr></label>
+            <input id="username" type="text" name="username">
+        </div>
+        <fieldset>
+            <legend>Fruit juice size</legend>
+            <p>
+                <input type="radio" name="size" id="size_1" value="small" />
+                <label for="size_1">Small</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size_2" value="medium" />
+                <label for="size_2">Medium</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size_3" value="large" />
+                <label for="size_3">Large</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>
+                <label for="taste_1">I like cherry</label>
+                <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+            </p>
+            <p>
+                <label for="taste_2">I like banana</label>
+                <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
