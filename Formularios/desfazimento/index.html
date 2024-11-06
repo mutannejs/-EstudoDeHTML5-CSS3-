@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="Stylesheet.css">
+  </head>
+  <body>
+    <div id="output"></div>
+    <form id="form">
+      <h1>Desfazimento</h1>
+      <section id="dados_geral">
+        <div>
+          <fieldset>
+            <legend>O Desfazimento está relacionado à um chamado?</legend>
+            <div>
+              <label for="eh_chamado"><input type="radio" id="eh_chamado" name="chamado" value="s" checked /> Sim</label>
+              <label for="nao_chamado"><input type="radio" id="nao_chamado" name="chamado" value="n" /> Não</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="description">
+          <fieldset>
+            <legend class="required">Descrição</legend>
+            <textarea id="descricao" name="descricao" rows="3" required placeholder="Informe uma descrição para esse desfazimento"></textarea>
+          </fieldset>
+        </div>
+      </section>
+      <section id="dados_chamado">
+        <h2>Dados do Chamado</h2>
+        <div class="field required">
+          <label for="id_chamado">ID do chamado:</label>
+          <input type="number" id="id_chamado" name="id_chamado" required />
+        </div>
+        <div class="field required">
+          <label for="departamento">Departamento:</label>
+          <input id="departamento" name="departamento" />
+        </div>
+        <div class="field">
+          <label for="sala">Prédio e sala:</label>
+          <input id="sala" name="sala" />
+        </div>
+        <div class="field required">
+          <label for="requerente">Quem abriu o chamado:</label>
+          <input id="requerente" name="requerente" />
+        </div>
+        <div>
+          <fieldset class="inline">
+            <legend>Já foi entregue:</legend>
+            <div>
+              <label for="foi_entregue"><input type="radio" id="foi_entregue" name="entregue" value="s" /> Sim</label>
+              <label for="nao_entregue"><input type="radio" id="nao_entregue" name="entregue" value="n" checked /> Não</label>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+      <section id="dados_equipamentos">
+        <h2>Equipamentos</h2>
+        <ol id="equipamentos"></ol>
+        <div>
+          <button class="btn btn_add" type="button" onclick="addEquipamento()">
+            <!-- Ícone do Bootstrap -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+            </svg>
+            Adicionar equipamento</button>
+        </div>
+      </section>
+      <hr>
+      <section>
+        <span id="message">
+          Adicione pelo menos um equipamento!
+        </span>
+        <button class="btn btn_fin" type="button" onclick="finalizarChamado()">Adicionar Desfazimento</button>
+      </section>
+    </form>
+    <script src="./JavaScript.js"></script>
+  </body>
+</html>

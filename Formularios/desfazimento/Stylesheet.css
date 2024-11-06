@@ -1,0 +1,205 @@
+body {
+    margin: 2em;
+}
+
+/* Mensagem de retorno */
+
+#output  {
+    display: none;
+    padding: 1em;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid transparent;
+}
+
+#output p {
+    font-weight: normal;
+    margin: 0;
+}
+
+#output.show {
+    display: block;
+}
+
+#output.error {
+    background-color: orangered;
+    border-color: red;
+    margin: 1em auto;
+}
+
+#output.success {
+    background-color: greenyellow;
+    color: #003c00;
+    border-color: #003c00;
+    margin: 5em auto;
+}
+
+/* Formulário */
+
+#form > * {
+    font: 1em mono, Arial, sans-serif;
+}
+
+#form.hidden {
+    display: none;
+}
+
+#form h1 {
+    font: bold 1.8em serif;
+}
+
+#form h2 {
+    font: bold 1.5em serif;
+}
+
+.field input[type="number"],
+.equip > .patr_equi {
+    font-family: mono;
+    width: 100px;
+    appearance: textfield;
+}
+
+.required::after {
+    content: '*\a0';
+    margin-left: 5px;
+    color: red;
+}
+
+.field.required::after {
+    position: absolute;
+}
+
+/* Geral */
+
+#dados_geral legend::before,
+#dados_geral legend::after {
+    content: '\a0';
+}
+
+#dados_geral legend.required::after {
+    content: '*\a0';
+}
+
+.description fieldset {
+    padding-top: 0px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+
+.description textarea {
+    width: 100%;
+    resize: vertical;
+    border: none;
+    background-color: #eee3;
+}
+
+.description textarea:focus {
+    outline: none;
+}
+
+/* Dados */
+
+#dados_chamado {
+    transition: .3s;
+}
+
+#dados_chamado.disabled {
+    pointer-events: none;
+    opacity: .4;
+}
+
+.field label {
+    display: inline-block;
+    width: 220px;
+}
+
+.field + .field {
+    margin-top: .4em;
+}
+
+fieldset.inline {
+    padding: 0px;
+    margin: 0px;
+    margin-top: .8em;
+    border: none;
+    position: relative;
+}
+
+fieldset.inline > legend {
+    padding: 0px;
+}
+
+fieldset.inline > div {
+    position: absolute;
+    top: -24px;
+    left: 225px;
+}
+
+/* Equipamentos */
+
+.equip {
+    margin-bottom: .8em;
+}
+
+.equip input:nth-child(2) {
+    width: 240px;
+}
+
+.equip input {
+    margin-right: 10px;
+}
+
+/* Mensagem */
+
+#message {
+    display: none;
+    padding: .1em;
+    background-color: red;
+    color: #fff;
+}
+
+#message.show {
+    display: inline;
+}
+
+/* Botões */
+
+.btn {
+    padding: .5em 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    font: bold .8em Arial, serif;
+    background-color: transparent;
+    border: 2px solid #57a7;
+    color: #57a;
+    transition: .2s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 4px #57a2;
+}
+
+.btn > svg {
+    width: 1.6em;
+    stroke: #57a;
+    stroke-width: 2px;
+}
+
+.btn_del {
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    border-radius: 40%;
+    /* border: none; */
+    /* box-shadow: 1px 1px 2px #0005; */
+}
+
+.btn_fin {
+    background-color: #c64;
+    border-color: #c647;
+    color: #fff;
+    float: right;
+}
