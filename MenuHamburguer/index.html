@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Menu Acessível e Responsivo</title>
+</head>
+<body>
+    <header id="header">
+        <img src="./burger.png" alt="ícone de um hamburguer" class="logo">
+        <nav id="nav">
+             <!-- aria-controls deve receber o id do elemento controlado pelo botão -->
+            <button
+                type="button"
+                id="hamburguer"
+                aria-expanded="false"
+                aria-label="Abrir Menu"
+                aria-controls="menu"
+                aria-haspopup="true"
+            >
+                Menu
+                <span></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li>Home</li>
+                <li>Projetos</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>
+            Imagem de <a href="https://pixabay.com/pt/users/alanyadk-1919646/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1396639" target="_blank" rel="external">Alanyadk</a> por <a href="https://pixabay.com/pt//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1396639" target="_blank" rel="external">Pixabay</a>.<br>
+            A cor do logo foi caputarada usando a extensão <a href="https://www.colorzilla.com/firefox/" target="_blank" rel="external">ColoZilla</a>, e usada como base desse tema, gerado pelo <a href="https://color.adobe.com/pt/create/color-wheel">Adobe Color</a> usando a harmonia de cores <em>Complementar</em> e o modo <em>RGB</em>.<br>
+            Esse site foi criado com base na vídeo aula <a href="https://youtu.be/DnODupiIAiE?si=VCNRbGLWgttdFu5b" target="_blank" rel="external">Menu Mobile - HTML, CSS e JavaScript</a> da <a href="https://www.youtube.com/@Origamid" target="_blank" rel="external">Origamid</a>.
+        </p>
+        <p>Desenvolvido por <span id="autor">Murillo JS</span>.</p>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

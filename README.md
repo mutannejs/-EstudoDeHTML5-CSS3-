@@ -4,10 +4,12 @@ Repositório criado para praticar e relembrar conceitos básicos sobre HTML5 e C
 
 ## Desafio do Android
 
-![Print do desafio do android](.github/screenshot-desafio-android.png)
+![Print do desafio do android](.github/desafio-android.jpg)
 
 Desafio feito no Curso em Vídeo, módulo 2 de HTML5 e CSS3.
 
 ## Menu Hamburguer
+
+![Print do menu hambúrguer](.github/menu-hamburguer.jpg)
 
 Menu Hambúrguer criado com base em uma vídeo aula da Origamid.

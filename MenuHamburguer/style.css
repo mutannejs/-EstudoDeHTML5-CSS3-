@@ -1,5 +1,4 @@
 :root {
-    /* Paleta gerada pelo Adobe Color, com base na harmonia de cores "Complementar", Modo de cores "RGB" e cor base "#FAB92D" (essa é a cor do logo, para pegar ela foi usada a extensão ColorZilla do navegador) */
     --cor0: #2D75FA;
     --cor1: #BA9950;
     --cor2: #FAB92D;
@@ -35,11 +34,11 @@ body {
     transition: .3s;
 }
 
-#hamburguer:hover {
+/* #hamburguer:hover {
     border-color: #7A6E53;
     text-shadow: 2px 2px 0px #7A6E53;
     box-shadow: 2px 2px 0px #7A6E53;
-}
+} */
 
 #hamburguer > span {
     display: block;
@@ -48,6 +47,7 @@ body {
     margin-top: .3em;
     margin-left: .7em;
     border-top: 2px solid var(--cor2);
+    transition: .5s;
 }
 
 #hamburguer > span::before,
@@ -57,30 +57,101 @@ body {
     width: 30px;
     margin-top: .5em;
     border-top: 2px solid var(--cor2);
+    transition: .5s;
 }
 
-.menu {
+#nav.active #hamburguer > span {
+    border-top: transparent;
+}
+
+#nav.active #hamburguer > span::before {
+    transform: rotate(225deg);
+    margin-bottom: .20em;
+}
+
+#nav.active #hamburguer > span::after {
+    transform: rotate(-225deg);
+    margin-top: -.30em;
+}
+
+#menu {
     display: flex;
     gap: .5em;
     list-style: none;
 }
 
-.menu > li {
+#menu > li {
     padding: 1em 1.5em;
     border: 1px solid transparent;
     transition: .3s;
 }
 
-.menu > li:hover {
+#menu > li:hover {
     cursor: pointer;
     border-color: #7A6E53;
     text-shadow: 2px 2px 0px #7A6E53;
     box-shadow: 2px 2px 0px #7A6E53;
 }
 
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    line-height: 2em;
+}
+
+main a {
+    color: var(--cor1);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+#autor {
+    font-weight: bold;
+    color: var(--cor0);
+}
+
 @media (max-width: 700px) {
-    .menu {
-        display: none;
+    .nav {
+        position: relative;
+    }
+
+    #menu {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        right: 0px;
+        top: 80px;
+        width: 100%;
+        height: 0px;
+        margin: 0;
+        padding: 0;
+        background-color: var(--cor5);
+        transition: .4s;
+    }
+
+    #menu > li {
+        text-align: right;
+        margin: 0 1em;
+        font-size: 1.3em;
+    }
+
+    #menu > li + li {
+        border-top: 2px solid var(--cor2);
+    }
+
+    nav.active #menu {
+        height: calc(100vh - 80px);
     }
 
     #hamburguer {
